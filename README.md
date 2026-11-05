@@ -1,6 +1,7 @@
 # CESE PEC 💩 排泄猛者倶楽部
 
 Club Excretus: Societas Excretorum
+
 The Prolific Excretors Club
 
 ## 会則
