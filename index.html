@@ -77,6 +77,8 @@
   nav.site b { color: var(--fg); font-weight: 600; }
   footer nav.site { margin: 0 0 14px; padding: 0; }
   footer .credit { margin: 14px auto 0; max-width: 640px; line-height: 1.8; }
+  /* 別荘の名前は長さがまちまちなので、ロゴより控えめに */
+  header .brand { font-size: clamp(26px, 5.5vw, 40px); line-height: 1.25; }
   /* 会則（この箱の README をそのまま読んで出す） */
   #rules { max-width: 640px; margin: 8px auto 4px; padding: 0 16px; text-align: center; color: var(--sub); line-height: 1.8; }
   #rules:empty { display: none; }
@@ -152,6 +154,7 @@
     const box = document.getElementById("rules");
     box.innerHTML = marked.parse(await r.text());
     const h1 = box.querySelector("h1"); if (h1 && h1 === box.firstElementChild) h1.remove();  // 名前は上の見出しに出ているので
+    if (box.textContent.trim()) document.getElementById("ownAbout").hidden = true;  // 会則が出たら、名札の自己紹介は引っ込める
   } catch {}
 })();
 </script>
