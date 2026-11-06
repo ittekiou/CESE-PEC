@@ -10,6 +10,10 @@ The Prolific Excretors Club
 
 ---
 
+附則　この箱は写してよい。写した箱も、どっかでつながっとく。
+
+---
+
 DyXis のNest。データ：[nest.json](nest.json)
 
 💩はなんにも知らないけれど。
