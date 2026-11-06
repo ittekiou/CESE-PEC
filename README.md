@@ -14,6 +14,4 @@ The Prolific Excretors Club
 
 ---
 
-DyXis のNest。データ：[nest.json](nest.json)
-
 💩はなんにも知らないけれど。
