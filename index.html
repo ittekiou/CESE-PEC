@@ -77,6 +77,14 @@
   nav.site b { color: var(--fg); font-weight: 600; }
   footer nav.site { margin: 0 0 14px; padding: 0; }
   footer .credit { margin: 14px auto 0; max-width: 640px; line-height: 1.8; }
+  /* 会則（この箱の README をそのまま読んで出す） */
+  #rules { max-width: 640px; margin: 8px auto 4px; padding: 0 16px; text-align: center; color: var(--sub); line-height: 1.8; }
+  #rules:empty { display: none; }
+  #rules h1, #rules h2, #rules h3 { color: var(--fg); font-size: 17px; margin: 14px 0 4px; }
+  #rules p { margin: 4px 0; }
+  #rules a { color: var(--blue); }
+  #rules hr { border: 0; border-top: 1px solid var(--line); width: 40%; margin: 12px auto; }
+  #rules ul, #rules ol { display: inline-block; text-align: left; margin: 4px 0; }
 </style>
 </head>
 <body>
@@ -84,6 +92,7 @@
   <p class="brand" id="ownName">Commons</p>
   <p class="tag sub" id="ownAbout"></p>
 </header>
+<section id="rules" aria-label="会則"></section>
 <nav class="site"><b>地図（Commons）</b> ・ <a href="nest.json">名札（nest.json）</a> ・ <a href="https://ittekiou.github.io/dyxis/guide.html">DyXis のしくみ</a></nav>
 
 <main>
@@ -128,6 +137,24 @@
   DyXis｜built on SLL ・ Synchro-Lag LOCUS｜SLL</p>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script>
+// 会則：この箱の README.md を GitHub から読んで、見出しの下に出す（写した箱では、その箱の README）
+(async () => {
+  try {
+    const host = location.hostname;
+    if (!host.endsWith(".github.io") || !window.marked) return;
+    const owner = host.split(".")[0];
+    const seg = location.pathname.split("/").filter(Boolean)[0];
+    const repo = seg && !seg.includes(".") ? seg : host;
+    const r = await fetch(`https://raw.githubusercontent.com/${owner}/${repo}/HEAD/README.md`, { cache: "no-store" });
+    if (!r.ok) return;
+    const box = document.getElementById("rules");
+    box.innerHTML = marked.parse(await r.text());
+    const h1 = box.querySelector("h1"); if (h1 && h1 === box.firstElementChild) h1.remove();  // 名前は上の見出しに出ているので
+  } catch {}
+})();
+</script>
 <script>
 (() => {
   const params = new URLSearchParams(location.search);
