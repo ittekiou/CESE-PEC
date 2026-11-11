@@ -16,6 +16,6 @@ The Prolific Excretors Club
 
 💩はなんにも知らないけれど。
 
-[Are.na](https://www.are.na/)でつながる👉 [CESE PEC｜The Rhizome Pit 🌱](https://www.are.na/cese-pec-the-rhizome-pit-a7jqy-i3aee)  
+🐜 [Areå.na](https://www.are.na/kei-itteki/tracentrance)でつながる 👉 [CESE PEC｜The Rhizome Pit 🌱](https://www.are.na/cese-pec-the-rhizome-pit-a7jqy-i3aee)  
 
 ---
