@@ -10,7 +10,7 @@ The Prolific Excretors Club
 
 ---
 
-附則　この箱は写してよい。写した箱も、どっかでつながっとく。
+附則　この箱は[写してよい](https://github.com/ittekiou/CESE-PEC/blob/main/COPY-GUIDE.md)。写した箱も、どっかでつながっとく。
 
 ---
 
