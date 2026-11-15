@@ -362,7 +362,7 @@
     document.getElementById("far").innerHTML = fh;
   }
 
-  // feeds.json: the Commons collects each Nest's newest items once a day (GitHub Actions)
+  // feeds.json: the Commons collects first-hop nests' newest items twice daily (GitHub Actions)
   let FEEDS = null;
   const fmt = s => s ? new Date(s).toLocaleString("ja-JP", { month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" }) : "—";
   function lagText(pub, got) {
